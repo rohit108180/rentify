@@ -29,6 +29,8 @@ body{
 }
 
 
+
+
 .modal-window {
   /* display: none; */
   position: fixed;
@@ -51,6 +53,8 @@ body{
   background-color: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(3px);
 }
+
+
 
 .modal-close {
   overflow: hidden;
@@ -83,7 +87,7 @@ body{
 .best-deals {
     width: 100%;
     height: 100vh;
-    background: url(/assests/bg2.png) center;
+    background: url("../assests/bg2.png") center;
     display: flex;
     justify-content: center;
     display: none;
@@ -217,6 +221,11 @@ body{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.car-details p{
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(41, 41, 41)
+}
+
 .show-all-btn {
   padding: 8px;
   font-size: 1rem;
@@ -335,15 +344,14 @@ body{
   width: 100%;
   height: 100%;
   position: absolute;
-  background: no-repeat center/100% url("/assests/bg3.png");
+  background: no-repeat center/100% url("../assests/bg3.png");
   opacity: 0.4;
 }
 .bg2{
   width: 100%;
-  height: 200%;
+  height: 250%;
   position: absolute;
-  background: repeat center/100% url("/assests/bg4.png");
-
+  background: repeat center/100% url("../assests/bg4.png");
   background-repeat: repeat-y;
   opacity: 0.3;
   z-index: 0;
@@ -625,24 +633,23 @@ body{
 
 .form-filter{
   width: 100%;
-  height: 70px;
+  height: 100px;
   background-color: #79b4b7;
   border-radius: 5px;
 }
 
-.form-filter form{
+.form-filter .box-row {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 100%;
-
+  height: 50%;
+  color: cornsilk;
 }
 
-.form-filter form .inputs{
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+.form-filter form input{
+  height: 30px;
+
+  /* width: 150px; */
 }
 
 .form-filter form .inputs span{
@@ -797,13 +804,48 @@ body{
 }
 
 
+div#book-now {
+  
+  /* height: 120vh; */
+  max-width: 50vw;
+  background: rgb(206, 206, 206);
+  background-color: burlywood;
+  margin: auto;
+  padding: 1rem;
+}
+
+.book-now-form input, .book-now-form label {
+  display: block;
+  margin: 5px 1rem;
+  max-width: 300px;
+  width: 100%;
+  margin: 1rem auto;
+  text-align: center;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.book-now-form label{
+  margin: 5px auto;
+}
 
 
+.bookDetails{
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
 
-
-
-
-
+.pay-now input{
+  width: 100%;
+  max-width: 300px;
+  background-color: rgb(60, 139, 60);
+  height: 30px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  color: var(--secondary-color2);
+}
 
 
 
