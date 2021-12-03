@@ -34,12 +34,13 @@
     </div>
  </footer>
 
- <script src="/script/script.js"></script>
+ <!-- <script src="/script/Rtscript.js"></script> -->
    
       <script
         src="https://kit.fontawesome.com/4f3c8bf71e.js"
         crossorigin="anonymous"
       ></script>
+      
 
       <script src="./script/Rtscript.js"></script>
     

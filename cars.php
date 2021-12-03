@@ -158,7 +158,7 @@ if(isset($_GET["location"])){
           </div>
 
           <div class="cars-items">
-            <div class="cars-item">
+            <!-- <div class="cars-item">
               <div class="cars-img">
                 <img src="../assests/cars/Hatachback/santro.jpeg" alt="SEDAN" />
               </div>
@@ -178,7 +178,7 @@ if(isset($_GET["location"])){
                 value ="BOOK NOW" >
                 </form> 
             </div>
-            </div>
+            </div> -->
 
             <?php 
             

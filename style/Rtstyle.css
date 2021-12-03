@@ -26,8 +26,523 @@ html {
 
 body{
   font-family: 'Ubuntu', sans-serif;
+  overflow-x: hidden;
 }
 
+
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color:var(--primary-color);
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: right;
+  overflow: hidden;
+  margin: 0px 1rem;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: var(--danger-color);
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.brand {
+  /* background-color: blue; */
+  width: 100px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  margin-right: 12px;
+}
+
+.brand img {
+  width: 100%;
+  height: 100%;
+}
+
+div.front {
+  /* content: ""; */
+  /* padding-top: 150px;
+    padding-left: 40px;
+    font-size: 40px;
+    font-family:monospace;
+    color: #478285; */
+  width: 100vw;
+  height: 100vh;
+  padding-right: 0px;
+  padding-top: 0px;
+  /* background-image: url("../assests/car.jpg") ; */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  /* background-attachment: fixed; */
+}
+div.front::before {
+  content: "";
+  opacity: 0.7;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  padding-right: 0px;
+  padding-top: 0px;
+  background-image: url("../assests/car.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-attachment: fixed; */
+}
+
+
+.front p{
+  /* background-color: rgba(0, 0, 0, 0.315); */
+  /* box-shadow: 1px 1px 5px black; */
+  width: 40%;
+  font-size: 5rem ;
+  color:var(--primary-color);
+  margin-top: 50vh;
+  margin-left: 5%;
+  transform: translateY(-50%);
+  border-bottom: 5px solid var(--danger-color);
+  border-radius: 5px ;
+}
+
+.testimonals {
+  background-color: var(--secondary-color1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 70vh;
+
+}
+
+
+.test {
+  text-align: center;
+  font-size: 2rem;
+  height: 40px;
+  width: 200px;
+  text-align: center;
+  overflow: hidden;
+  border-bottom: 5px solid var(--danger-color) ;
+  border-radius: 5px ;
+  color: #478285;
+}
+
+.container-testimonals{
+    height:70% ;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* background-color: yellowgreen; */
+}
+
+
+.testimonal-header h1{
+    font-size: 1.4rem;
+}
+
+
+
+.box {
+
+  background-color:var(--secondary-color2);
+  padding: 1rem;
+  width: 30%;
+  height: 80%;
+  border: 1px solid var(--danger-color);
+  border-radius: 5px ;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+/* 
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif; */
+  /* box-sizing: border-box; */
+  /* display: inline-block; */
+}
+
+.commas{
+    font-size: 1.3rem;
+}
+
+/* FOOTER */
+footer {
+  /* border:1px solid black; */
+  background-color: black;
+  height: 300px;
+  color:var(--secondary-color2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#foot {
+
+  width: 100%;
+  color:var(--secondary-color1);
+  display: flex;
+  justify-content: center;
+}
+
+.fott i{
+    font-size: 2.5rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 60%;
+  border-top: 2px solid var(--secondary-color1);
+}
+
+
+
+
+.last {
+
+  width: 33%;
+  height: 90%;
+  box-sizing: border-box;
+}
+
+#more-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding:1rem;
+
+    border-right: 1px solid var(--secondary-color1);
+}
+
+#more-links ul{
+    height: 70%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#more-links ul li{
+    overflow: hidden;
+}
+
+#more-links ul li a{
+    text-decoration: none ;
+    color: var(--secondary-color1);
+    font-size: 1.2rem;
+}
+
+
+
+#more-links ul li a:hover{
+    text-decoration: underline;
+}
+
+
+#quick-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ 
+    border-right: 1px solid var(--secondary-color1);
+    /* overflow: hidden; */
+}
+
+#quick-links b{
+    font-size: 2rem;
+    color: var(--secondary-color2);
+    text-decoration: underline;
+    margin: 5px;
+}
+
+#quick-links ul li{
+    overflow: hidden;
+    text-align: center;
+    margin: 5px;
+}
+
+
+#quick-links ul li a{
+    color: var(--secondary-color1);
+    text-decoration: none;
+    font-size: 1.2rem;
+
+}
+
+
+#quick-links ul li a:hover{
+    text-decoration: underline;
+}
+
+#last2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+#last2 p{
+    color: var(--secondary-color1);
+    font-size: 1.2rem;
+    text-decoration: underline;
+
+}
+
+.search {
+ width: 200px;
+ font-size: 1.2rem;
+ text-align: center;
+}
+
+
+.subscribe {
+  text-align: center;
+  width: 200px;
+  font-size: 1.2rem;
+  color: var(--secondary-color2);
+  background-color: var(--primary-color);
+}
+
+
+ /* amrisha  */
+
+
+  
+#subscriptions{
+  height: 90vh;
+}
+
+
+#subscriptions h3{
+  background-color:var(--bage);
+  font-size: x-large;
+}
+#options{
+
+  list-style: none; 
+  padding-left: 0px;
+  text-align: center;
+    
+ 
+}
+/*Making the list coming to the center*/
+
+#options li{
+  display: inline-block;
+  margin: 50px 50px;
+
+ 
+}
+/* Making the list be in line or horizontal way*/
+
+#options li a{
+  height: 100px;
+  text-decoration: none;
+  color: rgb(17, 11, 11);
+  font-size: 1.5rem;
+  background: radial-gradient(white,rgb(89, 173, 212));
+  border: 5px solid black;
+  padding: 1.5rem;
+  border-radius: 50%;
+
+    
+}
+
+/*Making the text of the list be in white color with no underline as its links*/
+
+#options li a:hover{
+  color: rgb(211, 169, 202);
+  text-decoration: none;
+  transition: color 0.5s;
+
+    
+}
+
+#Subscriptions{
+
+  font-family: "Comfortaa";
+  text-align: center;
+  background-color: var(--bage);
+}
+
+
+#daily{
+  height: 0;
+  width: 0;
+  position:fixed;
+  top:0;
+  left:0;
+  overflow:hidden;
+  transition:all 1.5s ease-in-out;
+}
+
+#daily:target
+{
+  height: 30%;
+  width: 30%;
+  background-color: rgb(214, 232, 255);
+  top: 25%;
+  left: 25%;
+
+}
+
+#weekly{
+  height: 0;
+  width: 0;
+  position:fixed;
+  top:0;
+  left:0;
+  overflow:hidden;
+  transition:all 1s ease-in-out;
+}
+
+#weekly:target
+{
+  height: 30%;
+  width: 30%;
+  background-color: rgb(214, 232, 255);
+  top: 25%;
+  left: 25%;
+
+}
+
+#monthly{
+  height: 0;
+  width: 0;
+  position:fixed;
+  top:0;
+  left:0;
+  overflow:hidden;
+  transition:all 1.5s ease-in-out;
+}
+
+#monthly:target
+{
+  height: 30%;
+  width: 30%;
+  background-color: rgb(214, 232, 255);
+  top: 25%;
+  left: 25%;
+
+}
+
+#dhamaka-offer{
+  height: 0;
+  width: 0;
+  position:fixed;
+  top:0;
+  left:0;
+  overflow:hidden;
+  transition:all 1.5s ease-in-out;
+}
+
+#dhamaka-offer:target
+{
+  height: 30%;
+  width: 30%;
+  background-color: rgb(214, 232, 255);
+  top: 25%;
+  left: 25%;
+
+}
+
+
+
+.close {
+position: absolute;
+right: 3px;
+top: 5px;
+width: 15px;
+height:20px;
+border: 1px solid black;
+background-color: cornsilk;
+}
+
+.go-about{
+  font-family: "Comfortaa";
+  color:coral ;
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: center;
+  align-content:center;
+  border: 2px solid black;
+  border-radius: 40%;
+  text-decoration: none;
+  padding: 5px;
+}
+
+/*******************************************************************/
+
+.adv-intro{
+  font-family: "Comfortaa";
+ 
+  background-color:rgb(126, 189, 226);
+  text-align: center;
+}
 
 
 
@@ -683,6 +1198,7 @@ body{
   margin: 1rem 0px;
   border-radius: 5px ;
   border: 2px solid var(--danger-color);
+  justify-content: center;
 }
 
 .cars-item .cars-img{
@@ -793,6 +1309,7 @@ body{
   height: 100%;
   display: flex;
   flex-direction: column;
+
   justify-content: space-around;padding: 1rem;
 }
 .car-name{
@@ -806,48 +1323,145 @@ body{
 
 div#book-now {
   
-  /* height: 120vh; */
+  min-height: 100vh;
   max-width: 50vw;
-  background: rgb(206, 206, 206);
-  background-color: burlywood;
+  background-color: var(--secondary-color2);
+  margin: 2rem auto;
+  /* padding: 1rem; */
+  border-radius: 5px;
+  
+}
+
+
+.bn-heading{
+  display: block;
+  font-size: 3rem;
+  background-color: var(--secondary-color1);
+  width: 90%;
+  padding: 5px;
   margin: auto;
-  padding: 1rem;
+  color: var(--primary-color);
+
 }
 
 .book-now-form input, .book-now-form label {
   display: block;
   margin: 5px 1rem;
-  max-width: 300px;
-  width: 100%;
-  margin: 1rem auto;
-  text-align: center;
-  height: 30px;
-  border-radius: 5px;
+  /* max-width: 300px; */
+  width: 90%;
+
+  /* text-align: center; */
+  height: 40px;
+  /* border-radius: 5px; */
+  padding: 5px;
+  margin :auto;
+  color: rgb(37, 37, 37);
+  font-weight: 300px;
+
 }
 
-.book-now-form label{
-  margin: 5px auto;
-}
+
 
 
 .bookDetails{
-  margin: 1rem;
-  padding: 1rem;
-  text-align: center;
+  /* margin: 1rem; */
+  padding: 1rem 0px;
+  /* text-align: center; */
   font-size: 1.2rem;
+  width: 100%;
+  /* background-color: yellowgreen; */
+}
+
+
+.bookDetails p {
+  padding: 3px;
+  width: 90%;
+  margin: auto;
+}
+
+.bookDetails p strong{
+  display: inline-block;
+  /* background-color:whitesmoke; */
+  width: 50%;
+  margin: auto;
+
 }
 
 .pay-now input{
-  width: 100%;
-  max-width: 300px;
+  width: 90%;
+  /* max-width: 300px; */
   background-color: rgb(60, 139, 60);
-  height: 30px;
-  margin-left: 50%;
-  transform: translateX(-50%);
+  height: 40px;
+
+  /* margin-left: 50%; */
+  /* transform: translateX(-50%); */
+  display: block;
+  margin: auto;
   color: var(--secondary-color2);
 }
 
 
+/* modal for book now */
+
+.pop-message-box{
+  background-color: var(--secondary-color2);
+  width: 40vw;
+  height: 130px;
+  font-size: 2rem;
+  padding: 1rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: green;
+  transform: translate(-50%, -50%);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.301);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+
+#close{
+  /* font-size: 4rem; */
+  position: absolute;
+  /* display: inline-block; */
+  /* font-size: 3rem; */
+  right: 10px;
+  top: 5px;color: black;
+}
+
+
+#close:hover{
+  transform: scale(1.05);
+}
+.pop-message-box .check{
+  font-size: 4rem;
+  display: inline-block;
+}
+
+.pop-message-box p{
+  width: 30vw;
+  display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.password-change{
+  height :100vh;
+  max-width: 700px;
+  margin:auto
+  
+}
 
 
 

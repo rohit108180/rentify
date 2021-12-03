@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rentify</title>
     <link rel="stylesheet" href="./style/Rtstyle.css">
-    <link rel="stylesheet" href="./style/Rentify_CSS.css">
-    <link rel="stylesheet" href= "style/rental.css">
+    
+
+    <!-- <link rel="stylesheet" href= "style/style.css"> -->
+
 </head>
 <body>
 <div class="navbar">
@@ -34,14 +36,23 @@
             <button class="dropbtn">
               <i class ="fas fa-user"></i>  
               <i class="fa fa-caret-down"></i>
+              
             </button>
             <div class="dropdown-content">
-              <a href="">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
+              <a href="previousbooking.php">Bookings</a>
+              <a href="changePassword.php">change password</a>
+              <a href="logout.php">logout</a>
             </div>
           </div>';}
           ?>
       </div>
+
+    <?php
+
+    $rmeoveForign = "SET GLOBAL FOREIGN_KEY_CHECKS=0;";
+
+    mysqli_query($con , $rmeoveForign);
+
+    ?>
 
     

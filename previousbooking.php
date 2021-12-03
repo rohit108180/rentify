@@ -3,6 +3,10 @@
 <?php 
 session_start();
 
+
+
+
+
 $user = "select * from customer_details c where c.email_id = '".$_SESSION['user_login_id']."'";
 
 $UDL =  mysqli_fetch_assoc(mysqli_query($con ,$user))["DL_NUMBER"];
@@ -12,14 +16,16 @@ $bookings = "select* from booking_details b , car c
 where b.DL_NUM = '".$UDL."' and b.REG_NUM = c.REGISTRATION_NUMBER ";
 
 
-  $fromDate = $_GET["from-date"];
-  $toDate = $_GET["to-date"];
+if(isset($_GET["submit"])){
+$fromDate = $_GET["from-date"];
+$toDate = $_GET["to-date"];
 
   if(!($fromDate == '' || $toDate == '')){
     $bookings = "select* from booking_details b , car c
 where b.DL_NUM = '".$UDL."' and b.REG_NUM = c.REGISTRATION_NUMBER and b.FROM_DT_TIME >= '$fromDate' and b.FROM_DT_TIME <= '$toDate' ";
   }
 
+}
 
 ?>
 
@@ -41,29 +47,28 @@ where b.DL_NUM = '".$UDL."' and b.REG_NUM = c.REGISTRATION_NUMBER and b.FROM_DT_
 
         <div class="cars-container">
           <!--form for filter-->
-          <div class="form-filter" style="order: 0">
+          <div class="form-filter " style="order: 0" >
 
-          <div class="box-row">
-        
-            <span>From</span>
-            <span>To</span>
-            <span>To</span>
-          </div>
+            <form action="previousbooking.php" method="GET" class= "box-row"">
 
-            <form action="previousbooking.php" method="GET" class= "box-row">
-
-               
-
+            <div>
+              <label for="from-date">From : </label>
                 <input type="date" name="from-date" id="loc" />
 
-                <input type="date" name="to-date" id="loc" />
+            </div>
+
+
+            <div>
+            <label for="to-date">To : </label>
+            <input type="date" name="to-date" id="loc" />
+            </div>
 
               <input class="butt" type="submit" name="submit" />
             </form>
           </div>
 
           <div class="cars-items">
-            <div class="cars-item">
+            <!-- <div class="cars-item">
               
               <div class="cars-details">
 
@@ -83,9 +88,11 @@ where b.DL_NUM = '".$UDL."' and b.REG_NUM = c.REGISTRATION_NUMBER and b.FROM_DT_
               >
             </div>
 
-          </div>
+            </div> -->
 
-          <?php 
+
+
+<?php 
 
 $result = mysqli_query($con , $bookings);
 
@@ -98,11 +105,14 @@ if(mysqli_num_rows($result) > 0 ){
         $ISRETURED = "";
         if($row["BOOKING_STATUS"] == "B"){
             $color = "red";
-            $ISRETURED = "RETURN";
+            $ISRETURED = '<a href  = "previousbooking.php?returncar='.$row["BOOKING_ID"].'" class="book-btn" style ="background-color: red;"
+            >RETURN</a
+          >';
         }
         else{
             $color = "turquoise";
-            $ISRETURED ="RETUNED";
+            $ISRETURED = '<p class="book-btn" style ="background-color: turquoise ;"
+            > RETURNED</p>';
         }
        
 
@@ -124,15 +134,26 @@ if(mysqli_num_rows($result) > 0 ){
         <div class="cars-price">
           <p class="cars-item-price">₹ <span>'.$row["AMOUNT"].'</span></p>
 
-        <a  class="book-btn" style ="background-color: '.$color.';"
-          >'.$ISRETURED.'</a
-        >
+        '.$ISRETURED.'
+        
       </div></div>';;
     }
 }
+
+if(isset($_GET["returncar"])){
+
+
+
+  $retrun = "UPDATE `booking_details` SET `BOOKING_STATUS` = 'R' WHERE `booking_details`.`BOOKING_ID` = '".$_GET["returncar"]."' ";
+
+  // echo $retrun;
+
+  if(mysqli_query($con, $retrun)){
+    echo  '<script>window.open("http://localhost/rentify/rentify/","_self")</script>';
+  }
+
+}
    
-
-
 ?>
         </div>
       </div>

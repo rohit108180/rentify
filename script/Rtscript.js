@@ -8,11 +8,14 @@ const modalBackground = document.querySelector(".background");
 
 // })
 
+
 modalClose.onclick = () => {
   modalWindow.classList.add("hidden");
+  
 };
 modalBackground.onclick = () => {
   modalWindow.classList.add("hidden");
+  
 };
 
 // slider
