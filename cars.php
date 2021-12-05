@@ -129,7 +129,7 @@ if(isset($_GET["location"])){
                   ?>
                 </select>
                 <select  name="car-category-select">
-                <option value = ''>Select Pick Up location</option>
+                <option value = ''>choose car Cateegories</option>
                   <?php 
 
                     $categories = "select * from car_category";

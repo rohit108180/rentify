@@ -35,16 +35,14 @@ if(isset($_POST["email"])){
   $sql = "INSERT INTO `customer_details` (`DL_NUMBER`, `FNAME`, `MNAME`, `LNAME`, `PHONE_NUMBER`, `EMAIL_ID`, `STREET`, `CITY`, `STATE_NAME`, `ZIPCODE`, `MEMBERSHIP_TYPE`, `MEMBERSHIP_ID`, `PASSWORD`) VALUES ('$Driving_license', '$fname', NULL, '$lname', '$contact_no', '$email', '$street', '$city', '$state', '$zip_code', 'N', NULL, '$password')";
   // $sql = "select * from customer_details;";
 
-  echo $sql;
+  // echo $sql;
   
   
 
   if( $result = mysqli_query($con , $sql)){
-    echo "You have successfully registered";
+    echo "<script>alert('You have successfully registered');</script>";
   }
-  else{
-    echo "you have Entered incorrect id or password";
-  }
+  
 }
 }
 else{

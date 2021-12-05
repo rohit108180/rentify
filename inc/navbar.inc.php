@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rentify</title>
-    <link rel="stylesheet" href="./style/Rtstyle.css">
+    <link rel="stylesheet" href="./style/Rtstyle.css?<?php echo time(); ?>"">
     
 
     <!-- <link rel="stylesheet" href= "style/style.css"> -->
@@ -16,7 +16,7 @@
 <div class="navbar">
         <a href="index.php">Home</a>
         <a href="previousBooking.php">About</a>
-        <a href="#news">Offers</a>
+        <a href="#pricing">Offers</a>
         <?php 
 				if(!isset($_SESSION["user_login_id"])){
                     
@@ -49,9 +49,8 @@
 
     <?php
 
-    $rmeoveForign = "SET GLOBAL FOREIGN_KEY_CHECKS=0;";
-
-    mysqli_query($con , $rmeoveForign);
+    // $rmeoveForign = "SET GLOBAL FOREIGN_KEY_CHECKS=0;";
+    // mysqli_query($con , $rmeoveForign);
 
     ?>
 
