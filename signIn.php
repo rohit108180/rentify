@@ -16,16 +16,13 @@ if(isset($_POST["email"])){
   $email = $_POST["email"];
   $contact_no = $_POST["contact-no"];
 //   $dob= $_POST["dob"];
-  $Driving_license = $_POST["DL"];
+  $Driving_license = strtoupper($_POST["DL"]);
   
   $password = $_POST["password"];
 
   if(strlen($password) <6){
     $msg = "Password must be of atlest 6 digits";
   }
-
-
-
   $re_password = $_POST["re-password"];
   if($password  != $re_password){
     $msg = "Password doesn't match";
@@ -39,7 +36,7 @@ if(isset($_POST["email"])){
   
   
 
-  if( $result = mysqli_query($con , $sql)){
+  if( mysqli_query($con , $sql)){
     echo "<script>alert('You have successfully registered');</script>";
   }
   
@@ -97,11 +94,6 @@ $con->close();
                     <label for="contact-num" id="contact-num-label">Contact number</label>
                     <input type="text" name="contact-no" placeholder="eg: 8877903411" required>
                     <br>
-<!-- 
-                    <label for="dob" id= "dob-label">Date of birth</label>
-                    <input type="date" name="dob" id="dob" required>
-                    <br> -->
-
                     <label id ="dl-label" for="DL">Driving Licence Number</label>
                     <input type="test" name="DL"  id="dl" required/>
                     <br>

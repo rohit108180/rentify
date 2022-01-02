@@ -18,6 +18,7 @@
     $user_query = "select * from customer_details c where c.email_id = '".$_SESSION['user_login_id']."'";
 
     $user =  mysqli_fetch_assoc(mysqli_query($con ,$user_query));
+    
 
     $bookings = "SELECT  count(b.BOOKING_ID) FROM booking_details b";
 

@@ -44,5 +44,3 @@ const validateLogin = () => {
 
   return returnvalue;
 };
-
-// validateLogin();

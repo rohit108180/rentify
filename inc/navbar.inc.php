@@ -41,6 +41,7 @@
             <div class="dropdown-content">
               <a href="previousbooking.php">Bookings</a>
               <a href="changePassword.php">change password</a>
+              <a href="updateProfile.php">Update Profile</a>
               <a href="logout.php">logout</a>
             </div>
           </div>';}
@@ -49,8 +50,7 @@
 
     <?php
 
-    // $rmeoveForign = "SET GLOBAL FOREIGN_KEY_CHECKS=0;";
-    // mysqli_query($con , $rmeoveForign);
+    
 
     ?>
 

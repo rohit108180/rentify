@@ -24,18 +24,13 @@ if(isset($_POST["username"])){
   }
   else{
 
-  $sql = "select * from customer_details where email_id = '$username' and password = '$password' limit 1;";
-  // $sql = "select * from customer_details;";
-
-  // echo $sql;
-  
+  $sql = "select * from customer_details where email_id = '$username' and password = '$password' limit 1;";  
   $result = mysqli_query($con , $sql);
 
   if( mysqli_num_rows($result) == 1){
     
     $_SESSION["user_login_id"] = $username;
     $_SESSION["user_password"] = $password;
-    setcookie('user_login', $user_login, time() + (365 * 24 * 60 * 60), "/");
     $msg= "You have successfully logged in";
     header('location: index.php');
   }

@@ -1471,6 +1471,31 @@ div#book-now {
   margin: auto;
 }
 
+
+
+.password-change h2{
+  font-size: 3rem;
+  color:var(--primary-color);
+  margin: 1rem;
+}
+
+.password-change form{
+  margin :1rem;
+  font-size: 2rem;
+}
+
+.password-change form input{
+  width: 250px;
+  height: 30px;
+  margin: 1rem 0px;
+  
+}
+.password-change form label{
+  margin: 0px 5px;
+}
+
+
+
 .hidden {
   display: none;
 }

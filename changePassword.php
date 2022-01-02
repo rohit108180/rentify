@@ -43,7 +43,7 @@ session_start();
 }
 
 ?>
-
+ 
 
     <?php include ("inc/navbar.inc.php") ?>
 

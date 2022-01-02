@@ -5,11 +5,6 @@ ob_start();
 session_start();
 
 
-if(isset($_COOKIE["index_msg"])){
-    echo '<script type="text/javascript">alert("'.$_COOKIE["index_msg"].'")</script>';
-    $_COOKIE["index_msg"] = "";
-}
-
 ?>
 
 
@@ -22,7 +17,7 @@ if(isset($_COOKIE["index_msg"])){
     </div>
     
 
-    <section class="modal-window hidden">
+    <section class="modal-window">
         <div class="background"></div>
         <div class="modal-img">
           <div class="modal-close">

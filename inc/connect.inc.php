@@ -9,6 +9,7 @@
 	}
 	else die("Couldn'ttt select DB");
 
-
+	$rmeoveForign = "SET GLOBAL FOREIGN_KEY_CHECKS=0;";
+    mysqli_query($con , $rmeoveForign);
 
 ?>
